@@ -1,0 +1,233 @@
+# Styles POC
+
+A Yew/Rust/WASM proof-of-concept demonstrating HTML5 semantic layouts with dynamic CSS theme switching.
+
+## Features
+
+- HTML5 semantic layout elements (header, nav, main, section, article, aside, footer)
+- Dynamic CSS theme switching via dropdown selector
+- Six distinct themes ranging from minimal to experimental
+- Pure Rust/WASM implementation with minimal JavaScript
+- Claude Code skills for AI-assisted theme development
+
+## Theme Gallery
+
+### Simple Light
+Clean, minimal light theme with system fonts and subtle styling.
+
+![Simple Light Theme](./images/screenshot1.png?ts=1732579200000)
+
+### Simple Dark
+Clean, minimal dark theme with comfortable contrast.
+
+![Simple Dark Theme](./images/screenshot2.png?ts=1732579200001)
+
+### Improved Light
+Modern light theme with indigo accents, soft shadows, and smooth animations.
+
+![Improved Light Theme](./images/screenshot3.png?ts=1732579200002)
+
+### Improved Dark
+Modern dark theme with deep purple palette and glow effects.
+
+![Improved Dark Theme](./images/screenshot4.png?ts=1732579200003)
+
+### Wild Light
+Radical light theme with animated gradients, rotated text, and bounce effects.
+
+![Wild Light Theme](./images/screenshot5.png?ts=1732579200004)
+
+### Wild Dark
+Neon cyberpunk theme with glowing effects, scanlines, and glitch animations.
+
+![Wild Dark Theme](./images/screenshot6.png?ts=1732579200005)
+
+## Getting Started
+
+### Prerequisites
+
+- Rust (latest stable)
+- Trunk (`cargo install trunk`)
+
+### Running Locally
+
+```bash
+# Development server with hot reload
+trunk serve
+
+# Production build
+trunk build --release
+```
+
+Open http://localhost:8080 and use the theme dropdown to switch between themes.
+
+## Project Structure
+
+```
+styles-poc/
++-- Cargo.toml              # Rust dependencies
++-- build.rs                # Build info injection
++-- index.html              # Trunk entry point
++-- favicon.ico             # Site favicon
++-- src/
+|   +-- main.rs             # App entry point and theme logic
+|   +-- lorem.rs            # Lorem ipsum content
+|   +-- components/
+|       +-- mod.rs          # Component exports
+|       +-- header.rs       # Header with theme selector
+|       +-- main_content.rs # Main content sections
+|       +-- sidebars.rs     # Nav and Aside components
+|       +-- footer.rs       # Footer with build info
++-- styles/
+|   +-- simple-light.css    # Minimal light theme
+|   +-- simple-dark.css     # Minimal dark theme
+|   +-- improved-light.css  # Modern light theme
+|   +-- improved-dark.css   # Modern dark theme
+|   +-- wild-light.css      # Experimental light theme
+|   +-- wild-dark.css       # Experimental dark theme
++-- images/
+|   +-- screenshot{1-6}.png # Theme screenshots
++-- docs/
+|   +-- prd.md              # Product requirements
+|   +-- architecture.md     # System architecture
+|   +-- design.md           # UI/UX design
+|   +-- plan.md             # Implementation plan
+|   +-- status.md           # Project status
+|   +-- process.md          # Development process
++-- .claude/
+    +-- skills/             # Claude Code skills
+```
+
+## Claude Code Skills
+
+This project includes two Claude Code skills for AI-assisted CSS theme development. These skills provide context and patterns that help Claude Code create consistent, high-quality themes.
+
+### ui-styling Skill
+
+**Location:** `.claude/skills/ui-styling/`
+
+**Purpose:** Creates modern, polished CSS themes with professional styling.
+
+**Files:**
+
+#### SKILL.md
+The main skill definition file containing:
+- Skill metadata (name, description)
+- Project context for the Yew/WASM app
+- CSS custom properties convention
+- Step-by-step theming instructions
+- Theme style ideas (modern, bold, minimal, retro, corporate)
+- File naming conventions
+- Code examples for common patterns
+
+#### patterns.md
+A comprehensive CSS patterns reference including:
+
+**Color Palettes:**
+- Soft Neutrals (indigo primary)
+- Ocean Blues
+- Forest Greens
+- Warm Sunset
+- Deep Purple (dark)
+- Midnight (dark)
+
+**Typography Stacks:**
+- Modern Sans-Serif (Inter)
+- Elegant Serif (Merriweather)
+- Technical/Code (JetBrains Mono)
+- Friendly Rounded (Nunito)
+
+**Effects:**
+- Shadow systems (subtle, colored, inset)
+- Animation patterns (fade, slide, pulse)
+- Border styles (subtle, gradient, accent)
+- Interactive states (hover, focus, active)
+- Glassmorphism and Neumorphism
+- Gradient text effects
+
+**Accessibility:**
+- Reduced motion media queries
+- High contrast support
+- System theme detection
+
+### wild-ui-styling Skill
+
+**Location:** `.claude/skills/wild-ui-styling/`
+
+**Purpose:** Creates radical, experimental CSS themes with bold animations and unconventional styling.
+
+**Files:**
+
+#### SKILL.md
+The skill definition for experimental themes:
+- Guidelines for bold, attention-grabbing design
+- Animation-first approach
+- Transform and rotation techniques
+- Performance considerations for animations
+
+#### patterns.md
+A reference for wild CSS effects including:
+
+**Gradient Backgrounds:**
+- Animated shifting gradients
+- Mesh gradients with multiple radial stops
+- Diagonal stripe patterns
+- Conic gradient bursts
+
+**Text Rotations:**
+- Tilted headings (-3deg to -5deg)
+- Dramatic tilt with layered shadows
+- Perspective transforms
+- Hover rotation effects
+
+**Animations:**
+- Fade-in variations (up, scale, staggered)
+- Slide-in from all directions
+- Bounce effects with cubic-bezier
+- Floating/hovering elements
+- Pulse and glow effects
+- Rainbow border cycling
+- Spin animations
+
+**Neon Effects:**
+- Cyberpunk color palettes
+- Vaporwave pastels
+- Sunset fire gradients
+- Electric ocean blues
+- Neon glow shadows
+- Glitch/flicker effects
+
+**Wild Hover States:**
+- Shake on hover
+- Glitch distortion
+- Neon flicker
+
+### Using the Skills
+
+When working with Claude Code in this project:
+
+1. **For modern themes:** Ask Claude to "create a new theme" or "improve the styling" - it will automatically use the ui-styling skill patterns.
+
+2. **For experimental themes:** Ask for "wild", "radical", "cyberpunk", or "animated" themes - Claude will use the wild-ui-styling skill.
+
+3. **Adding new themes:**
+   - Create CSS file in `styles/` directory
+   - Add option to dropdown in `src/components/header.rs`
+   - Follow the CSS custom properties convention from the skills
+
+## Technology Stack
+
+- **Yew 0.21** - Rust framework for WebAssembly
+- **wasm-bindgen** - Rust/JavaScript interop
+- **web-sys** - Web API bindings
+- **Trunk** - WASM build tool
+- **CSS Custom Properties** - Theming system
+
+## License
+
+Copyright 2024 Software Wrighter LLC
+
+## Links
+
+- [Repository](https://github.com/softwarewrighter/styles-poc)
+- [License](LICENSE)
