@@ -22,7 +22,7 @@ Clean, minimal light theme with system fonts and subtle styling.
 ### Simple Dark
 Clean, minimal dark theme with comfortable contrast.
 
-![Simple Dark Theme](./images/screenshot2.png?ts=1732579200001)
+![Simple Dark Theme](./images/screenshot2.png?ts=1764113910793)
 
 ### Improved Light
 Modern light theme with indigo accents, soft shadows, and smooth animations.
