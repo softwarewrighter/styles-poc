@@ -11,8 +11,9 @@ mod build_info {
 }
 
 // Footer text constants for sw-checklist detection
-const COPYRIGHT_TEXT: &str = "Copyright 2024 Software Wrighter LLC";
+const COPYRIGHT_TEXT: &str = "Copyright (c) 2025 Michael A Wright";
 const LICENSE_LINK_TEXT: &str = "License Link";
+const LICENSE_LINK_URL: &str = "https://github.com/softwarewrighter/styles-poc/blob/main/LICENSE";
 const REPOSITORY_LINK_TEXT: &str = "Repository Link";
 
 #[function_component(Footer)]
@@ -27,7 +28,7 @@ pub fn footer() -> Html {
                 <div class="footer-left">
                     <p class="copyright">{ COPYRIGHT_TEXT }</p>
                     <p class="links">
-                        <a href="LICENSE" target="_blank">{ LICENSE_LINK_TEXT }</a>
+                        <a href={LICENSE_LINK_URL} target="_blank" rel="noopener">{ LICENSE_LINK_TEXT }</a>
                         { " | " }
                         <a href="https://github.com/softwarewrighter/styles-poc"
                            target="_blank" rel="noopener">{ REPOSITORY_LINK_TEXT }</a>

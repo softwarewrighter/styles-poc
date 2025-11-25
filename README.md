@@ -225,9 +225,11 @@ When working with Claude Code in this project:
 
 ## License
 
-Copyright 2024 Software Wrighter LLC
+Copyright (c) 2025 Michael A Wright
+
+MIT License - see [LICENSE](https://github.com/softwarewrighter/styles-poc/blob/main/LICENSE) for details.
 
 ## Links
 
 - [Repository](https://github.com/softwarewrighter/styles-poc)
-- [License](LICENSE)
+- [License](https://github.com/softwarewrighter/styles-poc/blob/main/LICENSE)
