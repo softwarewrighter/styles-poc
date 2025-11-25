@@ -2,6 +2,8 @@
 
 A Yew/Rust/WASM proof-of-concept demonstrating HTML5 semantic layouts with dynamic CSS theme switching.
 
+**[Live Demo](https://softwarewrighter.github.io/styles-poc/)**
+
 ## Features
 
 - HTML5 semantic layout elements (header, nav, main, section, article, aside, footer)
@@ -87,13 +89,14 @@ styles-poc/
 |   +-- wild-dark.css       # Experimental dark theme
 +-- images/
 |   +-- screenshot{1-6}.png # Theme screenshots
-+-- docs/
++-- documentation/
 |   +-- prd.md              # Product requirements
 |   +-- architecture.md     # System architecture
 |   +-- design.md           # UI/UX design
 |   +-- plan.md             # Implementation plan
 |   +-- status.md           # Project status
 |   +-- process.md          # Development process
++-- docs/                   # GitHub Pages build output
 +-- .claude/
     +-- skills/             # Claude Code skills
 ```

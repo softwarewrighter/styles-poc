@@ -124,7 +124,7 @@ styles-poc/
 +-- build.rs
 +-- index.html
 +-- favicon.ico
-+-- docs/
++-- documentation/
 |   +-- architecture.md
 |   +-- design.md
 |   +-- plan.md

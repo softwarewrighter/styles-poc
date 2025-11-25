@@ -88,7 +88,7 @@ fn set_theme(theme: &str) {
 
 ## File Creation Order
 
-1. `docs/` - Documentation (this phase)
+1. `documentation/` - Documentation (this phase)
 2. `Cargo.toml` - Dependencies
 3. `index.html` - Entry point
 4. `src/main.rs` - App entry

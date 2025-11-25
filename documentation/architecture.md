@@ -103,7 +103,7 @@ User Action (Theme Select)
 styles-poc/
 +-- Cargo.toml
 +-- index.html
-+-- docs/
++-- documentation/
 |   +-- architecture.md
 |   +-- design.md
 |   +-- plan.md
