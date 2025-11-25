@@ -8,8 +8,8 @@
     <link id="theme-stylesheet" rel="stylesheet" href="styles/simple-light.css">
     
 <script type="module">
-import init, * as bindings from '/styles-poc-8fc27104d959565d.js';
-const wasm = await init({ module_or_path: '/styles-poc-8fc27104d959565d_bg.wasm' });
+import init, * as bindings from '/styles-poc/styles-poc-8fc27104d959565d.js';
+const wasm = await init({ module_or_path: '/styles-poc/styles-poc-8fc27104d959565d_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -20,7 +20,7 @@ dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 </script>
     
     
-<link rel="modulepreload" href="/styles-poc-8fc27104d959565d.js" crossorigin="anonymous" integrity="sha384-Ll/2NcJT9hcR6ZPlXldlDJ3utZc45pyPEJTtjGgDen1NgY0RW57dXxxOtWtnM1Fu"><link rel="preload" href="/styles-poc-8fc27104d959565d_bg.wasm" crossorigin="anonymous" integrity="sha384-qeNSwE3PPTa2G1fGp4/RlyoN0+bKviFm+D7KavazCOW+qB3tEef7Ik4qBH3IR1R/" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/styles-poc/styles-poc-8fc27104d959565d.js" crossorigin="anonymous" integrity="sha384-BpspEmp+lAu4O22POnV2UlyHyxGUfsq/xPVhBhaDAWIXkqwc49WVq62/ZOXlqNJz"><link rel="preload" href="/styles-poc/styles-poc-8fc27104d959565d_bg.wasm" crossorigin="anonymous" integrity="sha384-4AQwn3abSrOvNtzUWpDEDp8ZF/MXAilrOi4ekIdPr+qCbvSsjwpDNmw3HkqHhJjS" as="fetch" type="application/wasm"></head>
 <body>
     <!-- Yew will mount here -->
 </body>
