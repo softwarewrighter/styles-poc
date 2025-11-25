@@ -51,8 +51,14 @@
 ### Themes
 - [x] simple-light.css - Clean light theme
 - [x] simple-dark.css - Clean dark theme
+- [x] improved-light.css - Modern light theme with indigo accents
+- [x] improved-dark.css - Modern dark theme with purple gradients
 - [x] CSS custom properties for easy theming
 - [x] CSS Grid layout for page structure
+
+### Claude Code Skill
+- [x] ui-styling skill for creating modern CSS themes
+- [x] CSS patterns reference (patterns.md)
 
 ### Quality Assurance
 - [x] All tests passing (3 tests)
@@ -72,6 +78,12 @@ None - initial implementation complete.
 - Some function LOC warnings (acceptable, not failures)
 
 ## Recent Updates
+
+### 2025-11-25 (Improved Themes)
+- Added improved-light.css with modern styling (indigo accents, shadows, animations)
+- Added improved-dark.css with deep purple theme and glow effects
+- Created ui-styling Claude Code skill for CSS theming
+- Added CSS patterns reference document
 
 ### 2024-11-25 (Initial Implementation)
 - Created complete project documentation
@@ -119,8 +131,15 @@ styles-poc/
 |       +-- sidebars.rs
 |       +-- footer.rs
 +-- styles/
-    +-- simple-light.css
-    +-- simple-dark.css
+|   +-- simple-light.css
+|   +-- simple-dark.css
+|   +-- improved-light.css
+|   +-- improved-dark.css
++-- .claude/
+    +-- skills/
+        +-- ui-styling/
+            +-- SKILL.md
+            +-- patterns.md
 ```
 
 ## Notes
