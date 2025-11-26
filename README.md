@@ -8,7 +8,7 @@ A Yew/Rust/WASM proof-of-concept demonstrating HTML5 semantic layouts with dynam
 
 - HTML5 semantic layout elements (header, nav, main, section, article, aside, footer)
 - Dynamic CSS theme switching via dropdown selector
-- Six distinct themes ranging from minimal to experimental
+- Seven distinct themes ranging from minimal to retro terminal
 - Pure Rust/WASM implementation with minimal JavaScript
 - Claude Code skills for AI-assisted theme development
 
@@ -43,6 +43,11 @@ Radical light theme with animated gradients, rotated text, and bounce effects.
 Neon cyberpunk theme with glowing effects, scanlines, and glitch animations.
 
 ![Wild Dark Theme](./images/screenshot6.png?ts=1732579200005)
+
+### Terminal Dark
+Retro CRT terminal theme with green phosphor glow, scanlines, and monospace typography.
+
+![Terminal Dark Theme](./images/screenshot7.png?ts=1732579200007)
 
 ## Getting Started
 
@@ -87,8 +92,9 @@ styles-poc/
 |   +-- improved-dark.css   # Modern dark theme
 |   +-- wild-light.css      # Experimental light theme
 |   +-- wild-dark.css       # Experimental dark theme
+|   +-- terminal-dark.css   # Retro terminal theme
 +-- images/
-|   +-- screenshot{1-6}.png # Theme screenshots
+|   +-- screenshot{1-7}.png # Theme screenshots
 +-- documentation/
 |   +-- prd.md              # Product requirements
 |   +-- architecture.md     # System architecture
@@ -103,7 +109,7 @@ styles-poc/
 
 ## Claude Code Skills
 
-This project includes two Claude Code skills for AI-assisted CSS theme development. These skills provide context and patterns that help Claude Code create consistent, high-quality themes.
+This project includes three Claude Code skills for AI-assisted CSS theme development. These skills provide context and patterns that help Claude Code create consistent, high-quality themes.
 
 ### ui-styling Skill
 
@@ -205,6 +211,51 @@ A reference for wild CSS effects including:
 - Glitch distortion
 - Neon flicker
 
+### retro-ui-styling Skill
+
+**Location:** `.claude/skills/retro-ui-styling/`
+
+**Purpose:** Creates vintage/nostalgic CSS themes inspired by different computing eras.
+
+**Files:**
+
+#### SKILL.md
+The skill definition for retro themes:
+- Guidelines for era-specific design (Terminal, DOS, Windows 95, Early Mac)
+- CRT effects and scanlines
+- Authentic color palettes (phosphor green, amber, DOS blue)
+- Monospace typography patterns
+
+#### patterns.md
+A reference for retro CSS effects including:
+
+**Terminal Color Palettes:**
+- Classic Green Phosphor (P1)
+- Amber Phosphor (P3)
+- White Phosphor (P4)
+
+**DOS/Windows Palettes:**
+- Classic DOS Blue
+- DOS BIOS style
+- Windows 95 system colors
+
+**CRT Effects:**
+- Scanline overlays
+- Phosphor glow and text bloom
+- CRT flicker animations
+- Screen curvature effects
+
+**3D Effects (Windows 95):**
+- Beveled buttons (outset/inset)
+- Title bar gradients
+- System gray panels
+
+**Retro Typography:**
+- Terminal monospace fonts
+- DOS/BIOS style fonts
+- Windows 95 Tahoma
+- Early Mac Chicago/Geneva
+
 ### Using the Skills
 
 When working with Claude Code in this project:
@@ -213,7 +264,9 @@ When working with Claude Code in this project:
 
 2. **For experimental themes:** Ask for "wild", "radical", "cyberpunk", or "animated" themes - Claude will use the wild-ui-styling skill.
 
-3. **Adding new themes:**
+3. **For retro themes:** Ask for "terminal", "retro", "DOS", "Windows 95", or "vintage" themes - Claude will use the retro-ui-styling skill.
+
+4. **Adding new themes:**
    - Create CSS file in `styles/` directory
    - Add option to dropdown in `src/components/header.rs`
    - Follow the CSS custom properties convention from the skills

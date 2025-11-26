@@ -49,6 +49,9 @@ pub fn header(props: &HeaderProps) -> Html {
                     <option value="wild-dark" selected={props.theme == "wild-dark"}>
                         { "Wild Dark" }
                     </option>
+                    <option value="terminal-dark" selected={props.theme == "terminal-dark"}>
+                        { "Terminal Dark" }
+                    </option>
                 </select>
             </div>
         </header>
