@@ -47,7 +47,7 @@ Neon cyberpunk theme with glowing effects, scanlines, and glitch animations.
 ### Terminal Dark
 Retro CRT terminal theme with green phosphor glow, scanlines, and monospace typography.
 
-![Terminal Dark Theme](./images/screenshot7.png?ts=1732579200007)
+![Terminal Dark Theme](./images/screenshot7.png?ts=1764116679558)
 
 ## Getting Started
 
