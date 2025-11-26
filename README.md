@@ -8,7 +8,7 @@ A Yew/Rust/WASM proof-of-concept demonstrating HTML5 semantic layouts with dynam
 
 - HTML5 semantic layout elements (header, nav, main, section, article, aside, footer)
 - Dynamic CSS theme switching via dropdown selector
-- Seven distinct themes ranging from minimal to retro terminal
+- Nine distinct themes ranging from minimal to 3D perspective
 - Pure Rust/WASM implementation with minimal JavaScript
 - Claude Code skills for AI-assisted theme development
 
@@ -48,6 +48,16 @@ Neon cyberpunk theme with glowing effects, scanlines, and glitch animations.
 Retro CRT terminal theme with green phosphor glow, scanlines, and monospace typography.
 
 ![Terminal Dark Theme](./images/screenshot7.png?ts=1764116679558)
+
+### 3D Light
+Immersive light theme with CSS perspective, depth layers, and spatial animations.
+
+![3D Light Theme](./images/screenshot8.png?ts=1732588400000)
+
+### 3D Dark
+Deep ethereal dark theme with glowing depth effects and 3D transforms.
+
+![3D Dark Theme](./images/screenshot9.png?ts=1732588400001)
 
 ## Getting Started
 
@@ -93,8 +103,10 @@ styles-poc/
 |   +-- wild-light.css      # Experimental light theme
 |   +-- wild-dark.css       # Experimental dark theme
 |   +-- terminal-dark.css   # Retro terminal theme
+|   +-- 3d-light.css        # 3D perspective light theme
+|   +-- 3d-dark.css         # 3D perspective dark theme
 +-- images/
-|   +-- screenshot{1-7}.png # Theme screenshots
+|   +-- screenshot{1-9}.png # Theme screenshots
 +-- documentation/
 |   +-- prd.md              # Product requirements
 |   +-- architecture.md     # System architecture
@@ -109,7 +121,7 @@ styles-poc/
 
 ## Claude Code Skills
 
-This project includes three Claude Code skills for AI-assisted CSS theme development. These skills provide context and patterns that help Claude Code create consistent, high-quality themes.
+This project includes four Claude Code skills for AI-assisted CSS theme development. These skills provide context and patterns that help Claude Code create consistent, high-quality themes.
 
 ### ui-styling Skill
 
@@ -256,6 +268,77 @@ A reference for retro CSS effects including:
 - Windows 95 Tahoma
 - Early Mac Chicago/Geneva
 
+### 3d-ui-styling Skill
+
+**Location:** `.claude/skills/3d-ui-styling/`
+
+**Purpose:** Creates immersive CSS themes with 3D perspective effects, vanishing points, depth-based sizing, and interactive carousel-like transitions without WebGL or Three.js.
+
+**Files:**
+
+#### SKILL.md
+The skill definition for 3D perspective themes:
+- CSS perspective and transform-style guidelines
+- Vanishing point positioning techniques
+- Depth layer management with translateZ
+- Font sizing for depth perception
+- Carousel and interactive 3D effects
+- SVG integration for 3D objects
+- Performance considerations for 3D transforms
+
+#### patterns.md
+A reference for CSS 3D effects including:
+
+**Perspective Setup:**
+- Basic perspective containers
+- Off-center vanishing points
+- Two-point perspective simulation
+- Transform-style preserve-3d
+
+**Depth Layers:**
+- translateZ positioning
+- Scale compensation for distance
+- Atmospheric perspective (opacity/blur)
+- Depth-based shadows
+
+**Font Depth Effects:**
+- Size-based depth scaling
+- Dynamic font sizing with CSS variables
+- Opacity gradients for receding text
+
+**3D Carousel:**
+- Circular item distribution with rotateY
+- Vertical carousel with rotateX
+- Size/opacity changes based on position
+- Pause-on-hover interactions
+
+**Mouse-Driven Effects:**
+- Tilt cards on mouse move
+- Parallax depth layers
+- Scroll-based parallax
+- Mouse position tracking
+
+**SVG 3D Integration:**
+- Perspective grid (converging lines)
+- Isometric cubes and shapes
+- 3D extruded text shadows
+- Animated isometric grids
+
+**Card Effects:**
+- 3D flip on hover
+- Spring effect transitions
+- Depth-based layered shadows
+
+**3D Color Palettes:**
+- Cool Depth (blues)
+- Warm Depth (oranges)
+- Ethereal (purples)
+- Matrix (greens)
+
+**Accessibility:**
+- Reduced motion support
+- High contrast mode adjustments
+
 ### Using the Skills
 
 When working with Claude Code in this project:
@@ -266,7 +349,9 @@ When working with Claude Code in this project:
 
 3. **For retro themes:** Ask for "terminal", "retro", "DOS", "Windows 95", or "vintage" themes - Claude will use the retro-ui-styling skill.
 
-4. **Adding new themes:**
+4. **For 3D themes:** Ask for "3D", "perspective", "depth", "carousel", or "spatial" themes - Claude will use the 3d-ui-styling skill.
+
+5. **Adding new themes:**
    - Create CSS file in `styles/` directory
    - Add option to dropdown in `src/components/header.rs`
    - Follow the CSS custom properties convention from the skills
